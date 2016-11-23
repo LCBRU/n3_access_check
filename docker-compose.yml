@@ -21,6 +21,6 @@ services:
     depends_on:
       - app
     ports:
-      - "8100:80"
+      - "8100:443"
     links:
       - app:app
