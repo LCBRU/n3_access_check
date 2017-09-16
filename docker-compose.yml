@@ -12,15 +12,5 @@ services:
     environment:
       DEBUG: 'False'
       SECRET_KEY: '123456'
-
-  web:
-    restart: always
-    build: ./web
-    volumes_from:
-      - app
-    depends_on:
-      - app
     ports:
-      - "8100:443"
-    links:
-      - app:app
+      - 8101:8101
