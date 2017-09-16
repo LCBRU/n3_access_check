@@ -19,6 +19,19 @@
   		display: inline-block;
   		padding: 100px;
   	}
+    h2 {
+        margin-top: 80px;
+    }
+    a {
+        display: inline-block;
+        padding: 20px;
+        background: linear-gradient(#CC0000, #C00000);
+        color: #FFF;
+        margin-bottom: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 30px;
+    }
   </style>
 </head>
 
@@ -26,6 +39,12 @@
   <h1>N3 Access Check</h1>
   <p>Congratulations, you are able to view web pages on the NHS N3 network.</p>
   <p>Your N3 IP Address is <strong>{{ ip_address }}</strong>.</p>
+  <h2>This site is provided by the Leicester Biomedical Research Centre</h2>
+  <p>Here are our sites available on N3:</p>
+  <nav>
+      <a href="https://uhlbriccsext.uhl-tr.nhs.uk/redcap/" title="REDCap">REDCap for external organisations</a>
+      <a href="https://genvasc.uhl-tr.nhs.uk/" title="GENVASC GP Portal">GENVASC GP Portal</a>
+  </nav>
 </body>
 
 </html>
