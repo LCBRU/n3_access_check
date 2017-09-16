@@ -4,13 +4,9 @@ services:
   app:
     restart: always
     build: ./app
-    expose:
-      - "8101"
-    volumes:
-      - /usr/src/app/portal/static
     command: /usr/local/bin/gunicorn -w 2 -b :8101 app:app
     environment:
-      DEBUG: 'False'
-      SECRET_KEY: '123456'
+      DEBUG: APP_FLASK_SECRET_KEY
+      SECRET_KEY: APP_FLASK_DEBUG
     ports:
       - 8101:8101
