@@ -4,6 +4,8 @@ services:
   app:
     restart: always
     build: ./app
+    env_file:
+      - ./app.env
     command: /usr/local/bin/gunicorn -w 2 -b :8101 app:app
     environment:
       DEBUG: APP_FLASK_SECRET_KEY
