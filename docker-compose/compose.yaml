@@ -1,0 +1,7 @@
+services:
+  web:
+    image: lcbruit/pythonwebappbase:latest
+    ports:
+      - "8101:8080"
+    volumes:
+        - ../:/app
